@@ -10,4 +10,8 @@ Ejercicio de HTML, CSS Js del curso de Platzi, creación del juego "mokepon"
 Para que esta función se pueda utilizar se creó una variable que enlace con el boton seleccionar de id pet-selector-btn. Se accede despues al metodo addEventListener de esta variable con dos argumentos ='click', petSelector.
 *********************************************************
 - En la función petSelector modifique el código para validar la mascota seleccionada utilizando el método getDocumentById del input seleccionado si era .checked = true o false con el uso de condicionales if, else if y else.
+Además se agrega el método addEventListener con el argumento de load y start game al elemento window, de tal manera que primero se requiera renderizar la página antes de cargar el código js.
+*********************************************************
+- Actualice la función petSelector; la selección de cada mascota es a partir de variables nuevas, estas guardan el document.getElementById de cada uno, simplificando el código y permitiendo su reutilización.
+En los span que marcan el nombre de la mascota, así como las vidas se le agregó un id para poder trabajarlo en js; user-pet__name se trabajó primero en js. Se creó una nueva variable que modifica el span del html al hacer uso del método innerHTML, cada variable guarda el nombre de la mascota seleccionada que, al recibir el argumento click, modifica el span y coloca ese nombre; esto ocurre dentro de la sección messages en html.
 *********************************************************
