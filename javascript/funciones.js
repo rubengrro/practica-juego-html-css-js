@@ -1,27 +1,44 @@
 
-function petSelector(){
-    let inputRatigueya = document.getElementById
-    ('ratigueya')
-    let inputCapipepo = document.getElementById('capipepo')
-    let inputHipodoge = document.getElementById('hipodoge')
-    let spanPetUserName = document.getElementById('pet-user__name')
+function startGame(){
+    let petSelectorBtn = document.getElementById('pet-selector-btn')
+    petSelectorBtn.addEventListener('click', userPetSelector)
+}
+window.addEventListener('load', startGame)
+
+function aleatorio(min, max){
+    return Math.floor(Math.random()*((max - min) + 1) + min)
+}
+
+function userPetSelector(){
+let inputRatigueya = document.getElementById
+('ratigueya')
+let inputCapipepo = document.getElementById('capipepo')
+let inputHipodoge = document.getElementById('hipodoge')
+let spanUserPetName = document.getElementById('user-pet__name')
 
     if (inputRatigueya.checked){
-        spanPetUserName.innerHTML = 'Ratigueya'
+        spanUserPetName.innerHTML = 'Ratigueya'
     } else if(inputCapipepo.checked){
-        spanPetUserName.innerHTML = 'Capipepo'
+        spanUserPetName.innerHTML = 'Capipepo'
     }
     else if (inputHipodoge.checked){
-        spanPetUserName.innerHTML = 'Hipodoge'
+        spanUserPetName.innerHTML = 'Hipodoge'
     } else {
         alert('No puedes iniciar sin un Mokepon')
     }
+    enemyPetSelector()
 }
 
-function startGame(){
-    let petSelectorBtn = document.getElementById('pet-selector-btn')
-    petSelectorBtn.addEventListener('click', petSelector)
+function enemyPetSelector(){
+let randomEnemyPet = aleatorio(1,3)
+let spanEnemyPetName = document.getElementById('enemy-pet__name')
+    if (randomEnemyPet == 1){
+        spanEnemyPetName.innerHTML = 'Ratigueya'
+    } else if (randomEnemyPet == 2){
+        spanEnemyPetName.innerHTML = 'Capipepo'
+    } else if (randomEnemyPet == 3){
+        spanEnemyPetName.innerHTML = 'Hipodoge'
+    }
 }
 
 
-window.addEventListener('load', startGame)

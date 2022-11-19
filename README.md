@@ -13,5 +13,10 @@ Para que esta función se pueda utilizar se creó una variable que enlace con el
 Además se agrega el método addEventListener con el argumento de load y start game al elemento window, de tal manera que primero se requiera renderizar la página antes de cargar el código js.
 *********************************************************
 - Actualice la función petSelector; la selección de cada mascota es a partir de variables nuevas, estas guardan el document.getElementById de cada uno, simplificando el código y permitiendo su reutilización.
-En los span que marcan el nombre de la mascota, así como las vidas se le agregó un id para poder trabajarlo en js; user-pet__name se trabajó primero en js. Se creó una nueva variable que modifica el span del html al hacer uso del método innerHTML, cada variable guarda el nombre de la mascota seleccionada que, al recibir el argumento click, modifica el span y coloca ese nombre; esto ocurre dentro de la sección messages en html.
+En los span que marcan el nombre de la mascota, así como las vidas se le agregó un id para poder trabajarlo en js; user-pet__name se trabajó primero en js. Se creó una nueva variable que modifica el span del html al hacer uso del método innerHTML, cada variable guarda el nombre de la mascota seleccionada que, al recibir el argumento click, modifica el span y coloca ese nombre; esto ocurre dentro de la sección move-selector en html.
 *********************************************************
+- Se usa la clase y la función floor dentro de éste objeto: Math.floor() para conseguir que la mascota rival sea elegida de forma aleatoria; Math.floor() nos sirve para quitar los decimales al argumento que se le dé; como argumento recibe la clase Math con la función random: Math.random para que nos traiga un número entre 0 y 1. El valor de Math.random se multiplicará por una pequeña operación: ((min + max) + min) Todo esto está dentro de la función aleatorio() como un return, esta función recibe dos parámetros, un numero minimo y un máximo para establecer un rango que, para éste caso es 1 - 3. 
+La función aleatorio queda de la siguiente manera: aleatorio(min,max){
+    return Math.floor(Math.random()*(min + max) + min)
+}
+- De esta manera siempre obtendrémos un número entre 1 - 3 de forma que la mascota rival será elegida de forma aleatoria.
