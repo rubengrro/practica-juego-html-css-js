@@ -1,4 +1,5 @@
 let userAttack
+let enemyAttack
 
 function startGame(){
     let petSelectorBtn = document.getElementById('pet-selector-btn')
@@ -51,16 +52,39 @@ let spanEnemyPetName = document.getElementById('enemy-pet__name')
 
 function fireAttack(){
     userAttack = 'Fuego'
-    alert(userAttack)
+    enemyAttackSelector()
+    newMessage()
 }
 
 function waterAttack(){
     userAttack = 'Agua'
-    alert(userAttack)
+    enemyAttackSelector()
+    newMessage()
 }
 
 function groundAttack(){
     userAttack = 'Tierra'
-    alert(userAttack)
+    enemyAttackSelector()
+    newMessage()
 }
+
+function enemyAttackSelector(){
+    let randomAttack = aleatorio(1,3)
+    if (randomAttack == 1){
+        enemyAttack = 'Fuego'
+    } else if (randomAttack == 2){
+        enemyAttack = 'Agua'
+    } else if (randomAttack == 3){
+        enemyAttack = 'Tierra'
+    }
+}
+
+function newMessage(){
+    let messageSection = document.getElementById('messages')
+    let paragraph = document.createElement('p')
+    paragraph.innerHTML = 'Tu mascota atacó con ' + userAttack + ', y la mascota enemiga atacó con ' + enemyAttack
+
+    messageSection.appendChild(paragraph)
+}
+
 
