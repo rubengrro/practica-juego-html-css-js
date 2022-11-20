@@ -20,3 +20,6 @@ La función aleatorio queda de la siguiente manera: aleatorio(min,max){
     return Math.floor(Math.random()*(min + max) + min)
 }
 - De esta manera siempre obtendrémos un número entre 1 - 3 de forma que la mascota rival será elegida de forma aleatoria.
+*********************************************************
+- Añadí el código Js para la elección de los ataques del usuario; primero manipulamos el DOM para darle interacción a los botones: fire-btn, water-btn y ground-btn. Cada boton se guarda en una variable y posteriormente manipulamos el DOM añadiendo un addEventListener a cada variable dónde registramos un click y, si esto es true, entonces ejecutamos la función que nos regresará el ataque que hemos elegido para cada boton. fireAttack(), waterAttack() y groundAttack().
+- Para hacer estas funciones primero creamos una variable global: userAttack, que guardará el botón al que el usuario dió click y posteriormente nos regresa un alert mostrando el ataque: Fuego, Agua o Tierra.

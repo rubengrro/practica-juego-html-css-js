@@ -1,7 +1,15 @@
+let userAttack
 
 function startGame(){
     let petSelectorBtn = document.getElementById('pet-selector-btn')
     petSelectorBtn.addEventListener('click', userPetSelector)
+
+    let fireBtn = document.getElementById('fire-btn')
+    fireBtn.addEventListener('click', fireAttack)
+    let waterBtn = document.getElementById('water-btn')
+    waterBtn.addEventListener('click', waterAttack)
+    let groundBtn = document.getElementById('ground-btn')
+    groundBtn.addEventListener('click', groundAttack)
 }
 window.addEventListener('load', startGame)
 
@@ -41,4 +49,18 @@ let spanEnemyPetName = document.getElementById('enemy-pet__name')
     }
 }
 
+function fireAttack(){
+    userAttack = 'Fuego'
+    alert(userAttack)
+}
+
+function waterAttack(){
+    userAttack = 'Agua'
+    alert(userAttack)
+}
+
+function groundAttack(){
+    userAttack = 'Tierra'
+    alert(userAttack)
+}
 
