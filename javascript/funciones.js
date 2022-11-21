@@ -53,19 +53,19 @@ let spanEnemyPetName = document.getElementById('enemy-pet__name')
 function fireAttack(){
     userAttack = 'Fuego'
     enemyAttackSelector()
-    newMessage()
+    results()
 }
 
 function waterAttack(){
     userAttack = 'Agua'
     enemyAttackSelector()
-    newMessage()
+    results()
 }
 
 function groundAttack(){
     userAttack = 'Tierra'
     enemyAttackSelector()
-    newMessage()
+    results()
 }
 
 function enemyAttackSelector(){
@@ -79,10 +79,20 @@ function enemyAttackSelector(){
     }
 }
 
-function newMessage(){
+function results(){
+    if(userAttack == 'Agua' && enemyAttack == 'Fuego' || userAttack == 'Tierra' && enemyAttack == 'Agua' || userAttack == 'Fuego' && enemyAttack == 'Tierra'){
+        newMessage('Ganaste!!')
+    } else if (userAttack == enemyAttack){
+        newMessage('Es un empate')
+    } else {
+        newMessage('El enemigo ha ganado!!')
+    }
+}
+
+function newMessage(final){
     let messageSection = document.getElementById('messages')
     let paragraph = document.createElement('p')
-    paragraph.innerHTML = 'Tu mascota atacó con ' + userAttack + ', y la mascota enemiga atacó con ' + enemyAttack
+    paragraph.innerHTML = 'Tu mascota atacó con ' + userAttack + ' y la mascota enemiga atacó con ' + enemyAttack + '. ' + final
 
     messageSection.appendChild(paragraph)
 }
