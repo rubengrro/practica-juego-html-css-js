@@ -13,6 +13,8 @@ function startGame(){
     waterBtn.addEventListener('click', waterAttack)
     let groundBtn = document.getElementById('ground-btn')
     groundBtn.addEventListener('click', groundAttack)
+    let resetBtn = document.getElementById('reset-btn')
+    resetBtn.addEventListener('click', reset)
 }
 window.addEventListener('load', startGame)
 
@@ -120,6 +122,16 @@ function endGame(finalResult){
     paragraph.innerHTML = finalResult
 
     messageSection.appendChild(paragraph)
+
+    let fireBtn = document.getElementById('fire-btn')
+    fireBtn.disabled = true
+    let waterBtn = document.getElementById('water-btn')
+    waterBtn.disabled = true
+    let groundBtn = document.getElementById('ground-btn')
+    groundBtn.disabled= true
 }
 
+function reset (){
+    location.reload()
+}
 
