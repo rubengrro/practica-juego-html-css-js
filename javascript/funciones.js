@@ -1,5 +1,7 @@
 let userAttack
 let enemyAttack
+let userLife = 3
+let enemyLife = 3
 
 function startGame(){
     let petSelectorBtn = document.getElementById('pet-selector-btn')
@@ -79,13 +81,28 @@ function enemyAttackSelector(){
     }
 }
 
-function results(){
+function results(){ 
+    let spanUserLife = document.getElementById('user-pet__life')
+    let spanEnemyLife = document.getElementById('enemy-pet__life')
     if(userAttack == 'Agua' && enemyAttack == 'Fuego' || userAttack == 'Tierra' && enemyAttack == 'Agua' || userAttack == 'Fuego' && enemyAttack == 'Tierra'){
         newMessage('Ganaste!!')
+        enemyLife--
+        spanEnemyLife.innerHTML = enemyLife
     } else if (userAttack == enemyAttack){
         newMessage('Es un empate')
     } else {
         newMessage('El enemigo ha ganado!!')
+        userLife--
+        spanUserLife.innerHTML = userLife
+    }
+    petStats()
+}
+
+function petStats(){
+    if (userLife == 0){
+        endGame('Enemigo derrotado!')
+    } else if(enemyLife == 0){
+        endGame('Gana la mascota enemiga')
     }
 }
 
@@ -93,6 +110,14 @@ function newMessage(final){
     let messageSection = document.getElementById('messages')
     let paragraph = document.createElement('p')
     paragraph.innerHTML = 'Tu mascota atacó con ' + userAttack + ' y la mascota enemiga atacó con ' + enemyAttack + '. ' + final
+
+    messageSection.appendChild(paragraph)
+}
+
+function endGame(finalResult){
+    let messageSection = document.getElementById('messages')
+    let paragraph = document.createElement('p')
+    paragraph.innerHTML = finalResult
 
     messageSection.appendChild(paragraph)
 }
