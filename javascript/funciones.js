@@ -100,9 +100,9 @@ function results(){
 
 function petStats(){
     if (userLife == 0){
-        endGame('Enemigo derrotado!')
-    } else if(enemyLife == 0){
         endGame('Gana la mascota enemiga')
+    } else if(enemyLife == 0){
+        endGame('Enemigo derrotado!')
     }
 }
 
