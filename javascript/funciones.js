@@ -4,6 +4,11 @@ let userLife = 3
 let enemyLife = 3
 
 function startGame(){
+    let resetSection = document.getElementById('reset')
+    resetSection.style.display = 'none'
+    let attackSelector = document.getElementById('attack-selector')
+    attackSelector.style.display = 'none'
+
     let petSelectorBtn = document.getElementById('pet-selector-btn')
     petSelectorBtn.addEventListener('click', userPetSelector)
 
@@ -16,6 +21,7 @@ function startGame(){
     let resetBtn = document.getElementById('reset-btn')
     resetBtn.addEventListener('click', reset)
 }
+
 window.addEventListener('load', startGame)
 
 function aleatorio(min, max){
@@ -23,6 +29,12 @@ function aleatorio(min, max){
 }
 
 function userPetSelector(){
+let petSelector = document.getElementById('pet-selector')    
+petSelector.style.display = 'none'
+
+let attackSelector = document.getElementById('attack-selector')    
+attackSelector.style.display = 'block'
+
 let inputRatigueya = document.getElementById
 ('ratigueya')
 let inputCapipepo = document.getElementById('capipepo')
@@ -117,6 +129,8 @@ function newMessage(final){
 }
 
 function endGame(finalResult){
+    let resetSection = document.getElementById('reset')
+    resetSection.style.display = 'block'
     let messageSection = document.getElementById('messages')
     let paragraph = document.createElement('p')
     paragraph.innerHTML = finalResult

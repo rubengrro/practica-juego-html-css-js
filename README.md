@@ -40,3 +40,5 @@ La función aleatorio queda de la siguiente manera: aleatorio(min,max){
 - Aquí se hace uso del objeto location y su método o función .reload() en una nueva función llamada reset, para darle esa funcionalidad al boton de reiniciar. Se enlaza con el boton en html por medio de un document.getElementById() y posteriormente por el uso del método addEventListener con las propiedades click y reset.
 - Después se deshabilitan los botones de ataque al añadirles la propiedad disabled dentro de la función del mensaje final, ese que aparece cuando obtenemos un ganador y se crea el párrafo con ese texto.
 *********************************************************
+- Se realizó el código y la lógica para ocultar secciones en el juego, es decir, que lo primero que el usuario pueda ver e interactuar, sea la sección de seleccionar la mascota y después, una vez haga su elección, esta sección se oculte y muestre unicamente el apartado de elección de ataques y, al finalizar el juego, se muestre el botón de reiniciar.
+- Se crearon variables para cada sección y se modificó el atributo display a none, para poder ocultar estas secciones una vez el usuario haya hecho una acción.
