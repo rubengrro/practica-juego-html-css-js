@@ -5,39 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOKEPON</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>MOKEPON!🔥💧🌱</h1>
     <section id="pet-selector">
+        <h1>MOKEPON🔥💧🌱</h1>
         <h2>Selecciona tu mascota</h2>
-        <input type="radio" name="mokepon" id="ratigueya">
-        <label for="ratigueya">Ratigueya</label>
 
-        <input type="radio" name="mokepon" id="hipodoge">
-        <label for="hipodoge">Hipodoge</label>
-
-        <input type="radio" name="mokepon" id="capipepo">
-        <label for="capipepo">Capipepo</label>
+        <div class="mokepon-card-container">
+            <input type="radio" name="mokepon" id="ratigueya">
+            <label class="mokepon-card fire" for="ratigueya">
+                <p>Ratigueya</p>
+                <img src="https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png?raw=true">
+            </label>
+    
+            <input type="radio" name="mokepon" id="hipodoge">
+            <label class="mokepon-card water" for="hipodoge">
+                <p>Hipodoge</p>
+                <img src="https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png?raw=true" alt="Hipodoge">
+            </label>
+    
+            <input type="radio" name="mokepon" id="capipepo">
+            <label class="mokepon-card ground" for="capipepo">
+                <p>Capipepo</p>
+                <img src="https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png?raw=true" alt="Capipepo">
+            </label>
+        </div>
 
         <button id="pet-selector-btn">Seleccionar</button>
     </section>
 
     <section id="attack-selector">
+        <h1>MOKEPON!🔥💧🌱</h1>
         <h2>Selecciona tu ataque</h2>
-        <p>Tu <span id="user-pet__name"></span> tiene <span id="user-pet__life">3</span> vidas</p>
-        <p><span id="enemy-pet__name"></span> enemigo tiene <span id="enemy-pet__life">3</span> vidas</p>
-        <p>
+
+        <div>
             <button id="fire-btn">Fuego🔥</button>
             <button id="water-btn">Agua💧</button>
             <button id="ground-btn">Tierra🌱</button>
-        </p>
-    </section>
+        </div>
 
-    <section id="messages"></section>
-    <section id="reset">
-        <button id="reset-btn">Reiniciar</button>
-    </section>
+        <div>
+            
+        <section id="messages"></section>
+         <section id="reset">
+             <button id="reset-btn">Reiniciar</button>
+         </section>
 
+        </div>
+        <div>
+            <p>Tu <span id="user-pet__name"></span> tiene <span id="user-pet__life">3</span> vidas</p>
+            <p><span id="enemy-pet__name"></span> enemigo tiene <span id="enemy-pet__life">3</span> vidas</p>
+        </div>
+    </section>
 <script src="./javascript/funciones.js"></script>
 </body>
 </html>

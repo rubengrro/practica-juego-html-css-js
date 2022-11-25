@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+body {
+    font-family: 'Fredoka One', cursive;
+    background-color: #041562;
+}
+h1 {
+    color: antiquewhite;
+    font-size: 32px;
+    cursor: default;
+}
+#pet-selector{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pet-selector > h2 {
+    color: antiquewhite;
+    font-size: 20px;
+    cursor: default;
+}
+.mokepon-card-container{
+    display: flex;
+    gap: 10px;
+}
+.mokepon-card img {
+    width: 80px;
+}
+.mokepon-card{
+    text-align: center;
+    width: 180px;
+    height: 100px;
+    background-color: #11468F;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid  lightseagreen;
+    border-radius: 20px;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fire:hover {
+    background-color: darkred;
+    border: 1px solid orangered;
+    color: orange;
+    cursor: pointer;
+}
+
+.water:hover {
+    background-color: powderblue;
+    border: 1px solid dodgerblue;
+    color: dodgerblue;
+    cursor: pointer;
+}
+.ground:hover {
+    background-color: darkgreen;
+    border: 1px solid limegreen;
+    color: limegreen;
+    cursor: pointer;
+}
+input {
+    display: none;
+}
+#pet-selector-btn {
+    width: 120px;
+    height: 40px;
+    background-color: lightseagreen;
+    border: 1px solid hotpink;
+    font-weight: bold;
+    color: antiquewhite;
+    margin-top: 20px;
+    border-radius: 35px;
+}
+#pet-selector-btn:hover{
+    background-color: lightskyblue;
+    color: darkslategray;
+    cursor: pointer;
+}
