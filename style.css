@@ -15,10 +15,13 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-#pet-selector > h2 {
+h2 {
     color: antiquewhite;
     font-size: 20px;
     cursor: default;
+}
+.attack {
+    font-weight: normal;
 }
 .mokepon-card-container{
     display: flex;
@@ -48,11 +51,10 @@ h1 {
     color: orange;
     cursor: pointer;
 }
-
 .water:hover {
     background-color: powderblue;
     border: 1px solid dodgerblue;
-    color: dodgerblue;
+    color: blueviolet;
     cursor: pointer;
 }
 .ground:hover {
@@ -78,4 +80,39 @@ input {
     background-color: lightskyblue;
     color: darkslategray;
     cursor: pointer;
+}
+#attack-selector{
+    flex-direction: column;
+    align-items: center;
+}
+.btn {
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid  transparent;
+    border-radius: 45px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: normal;
+    width: 100px;
+}
+.F:hover {
+    background-color: darkred;
+    color: orange;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+}
+.W:hover {
+    background-color: powderblue;
+    color: blueviolet;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+}
+.G:hover {
+    background-color: darkgreen;
+    color: limegreen;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
 }
