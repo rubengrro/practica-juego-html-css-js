@@ -33,7 +33,7 @@ let petSelector = document.getElementById('pet-selector')
 petSelector.style.display = 'none'
 
 let attackSelector = document.getElementById('attack-selector')    
-attackSelector.style.display = 'block'
+attackSelector.style.display = 'flex'
 
 let inputRatigueya = document.getElementById
 ('ratigueya')
